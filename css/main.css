@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,'Malgun Gothic','돋움','dotum',"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+
+
+
+.title {
+    width: 100%;
+    text-align: center; 
+    font-size: 25px; 
+    margin:auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 40px solid black;
+
+}
+
+.title span {
+    font-family: 'Spartan', sans-serif;
+    font-size: 35px;
+}
+
+
+
+
+
+.slideshow {
+    width: 100%;
+    max-width: 540px;
+    height: 650px;
+    margin:auto;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.slideshow-slides {
+    width: 100%;
+    max-width: 540px;
+    height: 100%;
+    position: absolute;
+
+    /* left는 JavaScript로 지정 */
+}
+.slideshow-slides .slide {
+    width: 100%;
+    max-width: 540px;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+
+    /* left는 JavaScript로 지정 */
+}
+
+
+
+.slideshow img {
+    width: 90%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+
+/*슬라이드 네비*/
+
+
+.slideshow-nav a,
+.slideshow-indicator a {
+    background-color: rgba(0, 0, 0, 0); /* for IE9 */
+    overflow: hidden;
+}
+
+.slideshow-nav {
+    width: 100%;
+}
+
+
+.slideshow-nav a {
+    text-indent: -500em;
+    position: absolute;
+    top: 150px;
+    margin: 0;
+    padding: 0;
+    border: 0 none !important;
+    width: 25px;
+    height: 45px;
+    cursor: pointer;
+    background: url(../img/icon.png) no-repeat left top;
+    background-size: 200px;
+
+}
+
+.slideshow-nav a.prev {
+    left: 30px;
+    background-position: -114px 0;
+}
+
+
+.slideshow-nav a.next {
+    right: 30px;
+    background-position: -138px 0;
+}
+
+
+
+.slideshow-nav a:before,
+.slideshow-indicator a:before {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+.slideshow-nav a.disabled {
+    display: none;
+}
+
+
+/*슬라이드 인디케이터*/
+
+
+
+.slideshow-indicator {
+    width: 100%;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    margin-top: 95%;
+}
+.slideshow-indicator a {
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #000;
+    text-decoration: none;
+}
+.slideshow-indicator a.active {
+    cursor: default;
+    color: #fff;
+    font-weight: bold;
+    background-color: orange;
+    border-radius: 30px;
+}
+
+
+/* JavsScript 비활성화 시 */
+.no-js .slideshow {
+    height: auto;
+}
+.no-js .slideshow-slides {
+    height: auto;
+    position: static;
+}
+.no-js .slideshow-slides .slide {
+    display: block;
+    height: auto;
+    position: static;
+}
+.no-js .slideshow-slides .slide img {
+    margin: auto;
+    position: static;
+}
+.no-js .slideshow-nav,
+.no-js .slideshow-indicator {
+    display: none;
+}
+
+
+/* 아이패드& 웹 */
+
+@media screen and (min-width: 768px) {
+
+    .slideshow {
+    max-width: 750px;
+    height: 900px;
+
+}
+
+    .slideshow-slides {
+        max-width: 750px;
+        height: 100%;
+
+    }
+    .slideshow-slides .slide {
+
+        max-width: 750px;
+        height: 100%;
+
+        /* left는 JavaScript로 지정 */
+    }
+
+
+    .slideshow-nav {
+    width: 90%;
+    }
+
+    .slideshow-nav a {
+    top: 300px;
+    }
+
+    .slideshow-nav a.prev {
+        left: 50px;
+    }
+
+
+    .slideshow-nav a.next {
+        right: 50px;
+}
+
+
+  }
+
