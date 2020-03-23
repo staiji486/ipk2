@@ -1,0 +1,24 @@
+/*all*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    -webkit-font-smoothing: antialiased;
+    outline: 0;
+    font-family: -apple-system,BlinkMacSystemFont,'Malgun Gothic','','dotum',"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+/*미디어쿼리*/
+/*for mobile*/
+@media only screen and (max-width: 949px) and (min-width: 550px), only screen and (max-width: 549px) and (min-width: 400px), only screen and (max-width: 399px) and (min-width: 350px), only screen and (max-width: 349px) {}
+
+
+/*for ipad*/
+@media only screen and (max-width: 949px) and (min-width: 550px) {}
+
+
+/*for web*/
+@media only screen and (max-width: 1449px) and (min-width: 950px){}
